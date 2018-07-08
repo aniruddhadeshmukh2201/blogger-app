@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+<h1>index page!</h1>
+<% blogs.forEach(function(blog){ %>
+<div class="ui main text container segment">
+    <h1><%= blog.title%></h1>
+    <img src="<%= blog.image%>">
+    <span><%= blog.created %></span>
+    <p><%= blog.body%></p>
+    <div class="extra">
+        <a class="ui floated basic voilet button" href="/blogs/<%=blog._id%>">
+            Read More
+            <i class="right chevron icon"></i>
+        </a>
+    </div>
+</div>
+<% }); %>
+<% include ../partials/footer %>

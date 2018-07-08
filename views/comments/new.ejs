@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+<div class="ui main text container segment">
+    <h1>new Comment</h1>
+<form class="ui form" action="/blogs/<%= blog._id%>/comments" method="POST">
+    <div class="field">
+        <input type="text" name="comment[author]" placeholder="author">
+    </div>
+    <div class="field">
+        <input type="text" name="comment[text]" placeholder="text">
+    </div>
+    <div class="field">
+        <button class="ui primary button" type="submit">submit</button>
+    </div>
+</form>
+</div>
+<% include ../partials/footer %>
